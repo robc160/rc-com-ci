@@ -4,7 +4,6 @@
 		public function getPostCount(){
 			$this->db->count_all_results('posts');
 			$this->db->from('posts');
-			$this->db->where('type', '3');
 			$this->db->where('published', '1');
 			$query = $this->db->count_all_results();
 
@@ -13,9 +12,8 @@
 
 		public function getPosts($limit, $start){
 
-			$this->db->select('title, date, author, content');
+			$this->db->select('title, date, author, body, cover_image');
 			$this->db->from('posts');
-			$this->db->where('type', '3');
 			$this->db->where('published', '1');
 			$this->db->limit($limit, $start);
 			$query = $this->db->get();

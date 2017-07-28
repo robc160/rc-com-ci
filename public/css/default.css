@@ -4068,7 +4068,7 @@ button.close {
 
 /* line 58, ../scss/_custom.scss */
 .section-a {
-  background: url(http://local.dev/public/images/landscape.png) no-repeat 0;
+  background: url(http://rc-com.loc/public/images/landscape.png) no-repeat 0;
   background-size: cover;
 }
 /* line 61, ../scss/_custom.scss */
@@ -4195,7 +4195,7 @@ button.close {
 
 /* line 158, ../scss/_custom.scss */
 .section-title {
-  background: url(http://local.dev/public/images/landscape.png) no-repeat 0 -20px;
+  background: url(http://rc-com.loc/images/landscape.png) no-repeat 0 -20px;
   background-size: cover;
 }
 /* line 162, ../scss/_custom.scss */
