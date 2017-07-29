@@ -12,7 +12,7 @@
 
                     <div class="blog-post">
                       <h2 class="blog-post-title"><?php echo $record->title; ?></h2>
-                      <p class="blog-post-meta"><?php echo $myDateOfPost; ?> by <a href="#"><?php echo $record->author; ?></a></p>
+                      <p class="blog-post-meta"><?php echo $myDateOfPost; ?> by <a href="<?php echo base_url(); ?>blog/<?php echo $record->id; ?>"><?php echo $record->author; ?></a></p>
                       <p><?php echo $record->content; ?></p>
                       <hr>
             

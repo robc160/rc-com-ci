@@ -43,9 +43,20 @@ class BlogController extends CI_Controller {
 
 	}
 
-	public function show($post_id){
+	public function show(){
 
+		$post_id = $this->input->get('post');
+		$data['tabTitle'] = 'Blog';
+
+		$this->load->model('BlogDataModel');
+		$this->load->model('BlogCatDataModel');
 
 		$data['post'] = $this->BlogDataModel->getRequestedPost($post_id);
+		$this->load->view('header', $data);
+		$this->load->view('show', $data);
+		$data['records'] = $this->BlogCatDataModel->getCategories();
+		$this->load->view('categories', $data);
+		$this->load->view('footer');
+
 	}
 }
