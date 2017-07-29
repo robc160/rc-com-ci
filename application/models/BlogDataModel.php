@@ -21,5 +21,15 @@
 			return $query->result();
 		}
 
+		public function getRequestedPost($post_id){
+
+			$this->db->select('title, date, author, body, cover_image');
+			$this->db->from('posts');
+			$this->db->where('id', $post_id);
+			$query = $this->db->get();
+
+			return $query->result();
+		}
+
 
 	}

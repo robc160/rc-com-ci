@@ -7,7 +7,7 @@ class BlogController extends CI_Controller {
 
 		$this->load->library('pagination');
 		$config = array();
-		$config['base_url'] = 'http://localhost/rc-com/index.php/MainSiteController/blog';
+		$config['base_url'] = 'http://rc-com.loc/index.php/MainSiteController/blog';
 		$config['per_page'] = 5;
 
 		$this->load->model('BlogDataModel');
@@ -41,5 +41,11 @@ class BlogController extends CI_Controller {
 		$this->load->view('categories', $data);
 		$this->load->view('footer', $data);
 
+	}
+
+	public function show($post_id){
+
+
+		$data['post'] = $this->BlogDataModel->getRequestedPost($post_id);
 	}
 }
