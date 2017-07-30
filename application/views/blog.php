@@ -12,7 +12,7 @@
                     <div class="well">
                       <div class="row">
                         <div class="col-large-3 col-md-3 col-sm-3 post-thumbnail">
-                          <a href="<?php echo base_url( 'tutorial/').$record->id; ?>"><img class="cover-image" src="<?php echo base_url( 'public/images/').$record->cover_image; ?>"></a>               
+                        <iframe class="cover-image" src="<?php echo $record->video; ?>" frameborder="0" allowfullscreen></iframe>              
                         </div>
                         <div class="col-large-9 col-md-9 col-sm-9 post-body">
                           <h2 class="post-title"><a href="<?php echo base_url( 'tutorial/').$record->id; ?>"><?php echo $record->title; ?></a></h2>

@@ -45,9 +45,7 @@ class BlogController extends CI_Controller {
 
 	public function tutorial( $post_id = NULL ){
 
-		$data['tabTitle'] = 'Tutorial';
-
-		$this->load->model('BlogDataModel');
+		
 		$this->load->model('BlogCatDataModel');
 
 		$data['post'] = $this->BlogDataModel->getRequestedPost($post_id);
@@ -55,6 +53,19 @@ class BlogController extends CI_Controller {
 		$this->load->view('show', $data);
 		$data['records'] = $this->BlogCatDataModel->getCategories();
 		$this->load->view('categories', $data);
+		$this->load->view('footer');
+
+	}
+
+	public function code(){
+
+		$data['tabTitle'] = 'Source Code';
+
+		$this->load->model('BlogDataModel');
+		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data['records'] = $this->BlogDataModel->getPosts(5, $page);
+		$this->load->view('header', $data);
+		$this->load->view('code', $data);
 		$this->load->view('footer');
 
 	}
