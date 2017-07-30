@@ -6,7 +6,7 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
-		<link  rel="stylesheet" href="<?php echo base_url(); ?>public/css/default.css" />
+		<link  rel="stylesheet" href="<?php echo base_url('public/css/default.css'); ?>" />
 	</head>
 	<body>
 		<div id="page-master-container">

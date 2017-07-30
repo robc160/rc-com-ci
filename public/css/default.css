@@ -4195,7 +4195,7 @@ button.close {
 
 /* line 158, ../scss/_custom.scss */
 .section-title {
-  background: url(http://rc-com.loc/images/landscape.png) no-repeat 0 -20px;
+  background: url(http://rc-com.loc/public/images/landscape.png) no-repeat 0; 
   background-size: cover;
 }
 /* line 162, ../scss/_custom.scss */
@@ -4355,16 +4355,49 @@ footer .right small {
   border-radius: 5px 5px 5px 5px;
 }
 
+.container-wide {
+  min-width: 100%;
+}
+
+.container-wide .well{
+  border: 1px solid #000;
+}
+
 /* line 293, ../scss/_custom.scss */
 .blog-post {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 /* line 296, ../scss/_custom.scss */
-.blog-post h2 {
+.post-title {
   font-family: 'Passion One', cursive;
-  font-size: 1.8em;
   color: #616161;
   margin-bottom: 5px;
+  margin-top: 0;
+}
+.post-title a {
+  font-family: 'Passion One', cursive;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #616161;
+  margin-bottom: 5px;
+}
+.post-title a:hover {
+  color: #000;
+  margin-top: 0;
+}
+.post-body{
+  padding-top: 0;
+}
+.post-body p{
+  margin-top: 0;
+} 
+.cover-image {
+    width: 100%;
+    margin: 0; 
+}
+.post-thumbnail{
+  margin: 0; 
+  padding: 0;
 }
 /* line 302, ../scss/_custom.scss */
 .blog-post h3 {
@@ -4381,7 +4414,7 @@ footer .right small {
 }
 /* line 315, ../scss/_custom.scss */
 .blog-post hr {
-  border-color: #000;
+  border-color: #000; 
 }
 
 /* line 319, ../scss/_custom.scss */
