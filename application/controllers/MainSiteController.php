@@ -10,7 +10,7 @@ class MainSiteController extends CI_Controller {
 
 	}
 
-	public function contact() {
+	public function contact() {   
 
 		$data['tabTitle'] = 'Contact';
 		$this->load->view('header', $data);

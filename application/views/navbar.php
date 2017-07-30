@@ -15,18 +15,18 @@
           						<li><a href="<?php echo base_url(); ?>about">About</a></li>
           	<?php		} ?>            				
           	<?php 
-          					if($tabTitle == 'Tutorials'){ ?>
+          					if($tabTitle == 'Tutorials' || $tabTitle == 'Tutorial' ){ ?>
 											<li class="active"><a href="<?php echo base_url(); ?>tutorials">Tutorials</a></li>
           	<?php		}
           					else{ ?>
           						<li><a href="<?php echo base_url(); ?>tutorials">Tutorials</a></li>
           	<?php	  } ?>            				
           	<?php 
-          					if($tabTitle == 'Blog'){ ?>
-											<li class="active"><a href="<?php echo base_url(); ?>blog">Blog</a></li>
+          					if($tabTitle == 'Source Code'){ ?>
+											<li class="active"><a href="<?php echo base_url('code'); ?>">Source Code</a></li>
           	<?php		}
           					else{ ?>
-          						<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
+          						<li><a href="<?php echo base_url('code'); ?>">Source Code</a></li>
           	<?php		} ?> 
           	<?php 
           					if($tabTitle == 'Contact'){ ?>

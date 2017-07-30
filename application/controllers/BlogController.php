@@ -3,11 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class BlogController extends CI_Controller {
 
-    	public function blog(){
+    	public function tutorials(){
 
 		$this->load->library('pagination');
 		$config = array();
-		$config['base_url'] = 'http://rc-com.loc/index.php/MainSiteController/blog';
+		$config['base_url'] = 'http://rc-com.loc/tutorials';
 		$config['per_page'] = 5;
 
 		$this->load->model('BlogDataModel');
@@ -28,7 +28,7 @@ class BlogController extends CI_Controller {
 		$config['last_tagl_close'] = "</li>";
 		$this->pagination->initialize($config);
 
-		$data['tabTitle'] = 'Blog';
+		$data['tabTitle'] = 'Tutorials';
 		$this->load->view('header', $data);
 
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
@@ -43,10 +43,9 @@ class BlogController extends CI_Controller {
 
 	}
 
-	public function show(){
+	public function tutorial( $post_id = NULL ){
 
-		$post_id = $this->input->get('post');
-		$data['tabTitle'] = 'Blog';
+		$data['tabTitle'] = 'Tutorial';
 
 		$this->load->model('BlogDataModel');
 		$this->load->model('BlogCatDataModel');
