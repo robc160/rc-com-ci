@@ -22,12 +22,12 @@
           						<li><a href="<?php echo base_url(); ?>tutorials">Tutorials</a></li>
           	<?php	  } ?>            				
           	<?php 
-          					if($tabTitle == 'Source Code'){ ?>
+          			/*		if($tabTitle == 'Source Code'){ ?>
 											<li class="active"><a href="<?php echo base_url('code'); ?>">Source Code</a></li>
           	<?php		}
           					else{ ?>
           						<li><a href="<?php echo base_url('code'); ?>">Source Code</a></li>
-          	<?php		} ?> 
+          	<?php		}*/ ?> 
           	<?php 
           					if($tabTitle == 'Contact'){ ?>
 											<li class="active"><a href="<?php echo base_url(); ?>contact.php">Contact</a></li>

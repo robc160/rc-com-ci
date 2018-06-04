@@ -12,7 +12,7 @@
 
 		public function getPosts($limit, $start){
 
-			$this->db->select('id, title, date, author, body, video');
+			$this->db->select('id, title, date, author, body, video, cover_image');
 			$this->db->from('posts');
 			$this->db->where('published', '1');
 			$this->db->limit($limit, $start);
@@ -23,7 +23,7 @@
 
 		public function getRequestedPost($post_id){
 
-			$this->db->select('title, date, author, body, cover_image');
+			$this->db->select('id, title, date, author, body, cover_image');
 			$this->db->from('posts');
 			$this->db->where('id', $post_id);
 			$query = $this->db->get();

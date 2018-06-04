@@ -32,7 +32,7 @@
 					<div class="container">
 						<h1>WELCOME!</h1>
 						<p class="lead">Hello I'm Rob. I'd like to help you turn your great idea into an awesome website. If your building your first site and need a little help or just want to get some new coding skills, this site is for you. So let's get started.</p>
-						<a href="about.html" class="btn btn-primary">Read More...</a>
+						<a href="<?php echo base_url();?>about" class="btn btn-primary">Read More...</a>
 					</div><!-- /container -->
 				</section><!-- /showcase -->
 				<section class="section-a">

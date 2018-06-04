@@ -7,7 +7,7 @@ class BlogController extends CI_Controller {
 
 		$this->load->library('pagination');
 		$config = array();
-		$config['base_url'] = 'http://rc-com.loc/tutorials';
+		$config['base_url'] = base_url().'tutorials';
 		$config['per_page'] = 5;
 
 		$this->load->model('BlogDataModel');
@@ -43,7 +43,7 @@ class BlogController extends CI_Controller {
 
 	}
 
-	public function tutorial( $post_id = NULL ){
+	public function categories( $post_id = NULL ){
 
 		
 		$this->load->model('BlogCatDataModel');
@@ -57,7 +57,20 @@ class BlogController extends CI_Controller {
 
 	}
 
-	public function code(){
+	public function tutorial(){
+
+		$post_id = $this->uri->segment(2);
+
+		$this->load->model('BlogDataModel');
+		$data['records'] = $this->BlogDataModel->getRequestedPost($post_id);
+		$data['tabTitle'] = 'Tutroial';
+		$this->load->view('header', $data);
+		$this->load->view('tutorial');
+		$this->load->view('footer');
+
+	}
+
+	/*public function code(){
 
 		$data['tabTitle'] = 'Source Code';
 
@@ -68,5 +81,5 @@ class BlogController extends CI_Controller {
 		$this->load->view('code', $data);
 		$this->load->view('footer');
 
-	}
+	}*/
 }

@@ -10,6 +10,14 @@ class MainSiteController extends CI_Controller {
 
 	}
 
+	public function about() {   
+
+		$data['tabTitle'] = 'About';
+		$this->load->view('header', $data);
+		$this->load->view('about');
+		$this->load->view('footer');
+	}
+
 	public function contact() {   
 
 		$data['tabTitle'] = 'Contact';
