@@ -4392,7 +4392,7 @@ footer .right small {
   margin-top: 0;
 } 
 .cover-image {
-    width: 100%;
+    width: 100vw;
     margin: 0; 
 }
 .post-thumbnail{
